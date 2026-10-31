@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import tn.esprim.gestionfoyer.entities.Universite;
 
 @Repository
-public interface UniversiteRepository extends JpaRepository<Universite,String> {
+public interface UniversiteRepository extends JpaRepository<Universite,Long> {
 }

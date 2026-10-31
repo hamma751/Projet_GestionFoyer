@@ -1,12 +1,15 @@
 package tn.esprim.gestionfoyer.entities;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
+@Data
 @Entity
 public class Etudiant implements Serializable {
 
@@ -23,9 +26,9 @@ public class Etudiant implements Serializable {
     private String ecole;
 
     @JsonFormat(pattern = "yyyy/MM/dd")
-
     private Date dateNaissance;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "etudiants")
     private List<Reservation> reservations;
 }

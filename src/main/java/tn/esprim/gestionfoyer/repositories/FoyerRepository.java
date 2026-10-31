@@ -5,5 +5,6 @@ import org.springframework.stereotype.Repository;
 import tn.esprim.gestionfoyer.entities.Foyer;
 
 @Repository
-public interface FoyerRepository extends JpaRepository<Foyer,String> {
+public interface FoyerRepository extends JpaRepository<Foyer,Long> {
+
 }
